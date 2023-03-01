@@ -122,6 +122,43 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "DataLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/DataLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataLayer.dll": {}
+        }
+      },
+      "Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ConsoleTables": "2.4.2",
+          "UI": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Service.dll": {}
+        }
+      },
+      "UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "DataLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/UI.dll": {}
+        }
       }
     }
   },
@@ -703,12 +740,28 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "DataLayer/1.0.0": {
+      "type": "project",
+      "path": "../DataLayer/DataLayer/DataLayer.csproj",
+      "msbuildProject": "../DataLayer/DataLayer/DataLayer.csproj"
+    },
+    "Service/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models/Service.csproj",
+      "msbuildProject": "../Models/Models/Service.csproj"
+    },
+    "UI/1.0.0": {
+      "type": "project",
+      "path": "../UI/UI/UI.csproj",
+      "msbuildProject": "../UI/UI/UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "ConsoleTables >= 2.4.2",
-      "Newtonsoft.Json >= 13.0.2"
+      "Newtonsoft.Json >= 13.0.2",
+      "Service >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -745,7 +798,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\USER\\Desktop\\Project\\BankProject\\Models\\Models\\Service.csproj": {
+              "projectPath": "C:\\Users\\USER\\Desktop\\Project\\BankProject\\Models\\Models\\Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,8 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using BankProject.AppServices;
-using BankProject.Display;
-using System.Globalization;
+using Service;
 using System.Text;
 
 

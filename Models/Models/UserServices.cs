@@ -1,19 +1,17 @@
-﻿using System;
+﻿using ConsoleTables;
+using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BankProject.Display;
-using BankProject.Domain.Enitities;
-using BankProject.Domain.Enums;
-using ConsoleTables;
-using Newtonsoft.Json;
+using UI;
 
-namespace BankProject.AppServices
+namespace Service
 {
     public class UserServices : IUserLogin, IUserAccountActions, ITransaction
     {
-       // private  List<UserAccount> userAccountList;
+        // private  List<UserAccount> userAccountList;
         private List<UserAccount> userAccountList;
         private UserAccount selectedAccount;
         private List<Transaction> _ListOfTransactions;
@@ -24,7 +22,7 @@ namespace BankProject.AppServices
 
         public UserServices()
         {
-            screen = new AppScreen();   
+            screen = new AppScreen();
             userAccountList = new List<UserAccount>();
         }
 
@@ -46,7 +44,7 @@ namespace BankProject.AppServices
                     Utility.PrintMessage("Invalid Options..", false);
                     break;
             }
-            
+
 
         }
 
@@ -63,7 +61,7 @@ namespace BankProject.AppServices
 
                 ProcessMenuoption();
             }
-          
+
         }
 
 
@@ -109,7 +107,7 @@ namespace BankProject.AppServices
             Console.WriteLine("locked access count: ");
             isLocked = bool.Parse(Console.ReadLine());
 
-           UserAccountList.Add(new UserAccount
+            UserAccountList.Add(new UserAccount
             {
                 Id = id,
                 FullName = fullName,
@@ -134,7 +132,7 @@ namespace BankProject.AppServices
 
             File.AppendAllLines(filePath, output);
 
-           // File.WriteAllLines(filePath, output);
+            // File.WriteAllLines(filePath, output);
 
             Console.WriteLine("All entries");
 
@@ -165,9 +163,9 @@ namespace BankProject.AppServices
                 userAccountList.Add(userAccount);
             }
 
-//1,Adebanjo Olaide,123456,321321,123123,5000.00,0,false
-//2,Folorunso Nene,456789,654654,456456 ,4000.00,0,false
-//3,Olatunji Money,987654,987987,789789,3000.00,1,true
+            //1,Adebanjo Olaide,123456,321321,123123,5000.00,0,false
+            //2,Folorunso Nene,456789,654654,456456 ,4000.00,0,false
+            //3,Olatunji Money,987654,987987,789789,3000.00,1,true
 
             // userAccountList = new List<UserAccount>
             //{
@@ -191,10 +189,10 @@ namespace BankProject.AppServices
 
                 ///
                 //if
-        
-                    ////
-                    foreach (UserAccount account in userAccountList)
-                    {
+
+                ////
+                foreach (UserAccount account in userAccountList)
+                {
                     count++;
                     selectedAccount = account;
                     if (inputAccount.CardNumber.Equals(selectedAccount.CardNumber))
@@ -251,7 +249,7 @@ namespace BankProject.AppServices
 
         private void ProcessMenuoption()
         {
-            switch(Validator.Convert<int>("an option:"))
+            switch (Validator.Convert<int>("an option:"))
             {
                 case (int)BankAppMenu.CheckBalance:
                     CheckBalance();
@@ -298,7 +296,7 @@ namespace BankProject.AppServices
 
             Console.WriteLine("");
 
-            if(transaction_amt <= 0)
+            if (transaction_amt <= 0)
             {
                 Utility.PrintMessage("Amount needs to be greater than 0", false);
                 return;
@@ -351,10 +349,10 @@ namespace BankProject.AppServices
             }
 
             //input validation
-            if(transaction_amt <= 0)
+            if (transaction_amt <= 0)
             {
                 Utility.PrintMessage("Amount must be greater than zero.", false);
-                    return;
+                return;
             }
             if (transaction_amt % 500 != 0)
             {
@@ -363,7 +361,7 @@ namespace BankProject.AppServices
             }
 
             //Logic validations
-            if(transaction_amt > selectedAccount.AccountBalance)
+            if (transaction_amt > selectedAccount.AccountBalance)
             {
                 Utility.PrintMessage($"Withdralal failed. Your balance is too low {Utility.FormatAmount(transaction_amt)}", false);
                 return;
@@ -451,7 +449,7 @@ namespace BankProject.AppServices
             }
 
             //check sender's account balance
-            if(internalTransfer.TransferAmount > selectedAccount.AccountBalance)
+            if (internalTransfer.TransferAmount > selectedAccount.AccountBalance)
             {
                 Utility.PrintMessage($"Transfered failed, Insufficeint funds{Utility.FormatAmount(internalTransfer.TransferAmount)}", false);
                 return;
@@ -501,7 +499,3 @@ namespace BankProject.AppServices
     }
 
 }
-
-
-
-

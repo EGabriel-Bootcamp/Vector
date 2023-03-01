@@ -1,15 +1,15 @@
-﻿using BankProject.Domain.Enitities;
+﻿using DataLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Display
+namespace UI
 {
     public class AppScreen
     {
-        internal const string cur = "N ";
+        public const string cur = "N ";
 
         public static void Welcome()
         {
@@ -30,10 +30,10 @@ namespace BankProject.Display
             Console.WriteLine("Note: We don't accept physical card");
 
             Utility.PressEnterToContinue();
-            
+
         }
 
-        internal static UserAccount UserLoginForm()
+        public static UserAccount UserLoginForm()
         {
             UserAccount tempUserAccount = new UserAccount();
 
@@ -45,15 +45,15 @@ namespace BankProject.Display
             return tempUserAccount;
         }
 
-        internal static void LoginProgress()
+        public static void LoginProgress()
         {
             Console.WriteLine("\nChecking card number and Pin.....");
 
             Utility.PrintDotAnimation();
-        
+
         }
 
-        internal static void PrintLockScreen()
+        public static void PrintLockScreen()
         {
             Console.Clear();
             Utility.PrintMessage("Your account has been locked", true);
@@ -62,12 +62,12 @@ namespace BankProject.Display
             Environment.Exit(1);
         }
 
-        internal static void WelcomeCustomer(string fullName)
+        public static void WelcomeCustomer(string fullName)
         {
             Console.WriteLine($"Welcome back,{fullName}.");
         }
 
-        internal static void DisplaayAppMenu()
+        public static void DisplaayAppMenu()
         {
             Console.Clear();
             Console.WriteLine("---------My Bank APP Menu----------");
@@ -80,14 +80,14 @@ namespace BankProject.Display
             Console.WriteLine("6.   Logout                       :");
         }
 
-        internal static void LogOutProgress()
+        public static void LogOutProgress()
         {
             Console.WriteLine("Thank you for using My Bank APP...");
             Utility.PrintDotAnimation();
             Console.Clear();
         }
 
-        internal static int SelectAmonunt()
+        public static int SelectAmonunt()
         {
             Console.WriteLine("");
             Console.WriteLine(":1.{0}500    5.{0}10,000", cur);
@@ -135,7 +135,7 @@ namespace BankProject.Display
         }
 
 
-        internal InternalTransfer InternalTransferForm()
+        public InternalTransfer InternalTransferForm()
         {
             var internalTransfer = new InternalTransfer();
             internalTransfer.ReciepeintBankAccountNumber = Validator.Convert<long>("recipient's account number:");

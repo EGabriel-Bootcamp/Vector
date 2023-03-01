@@ -1,11 +1,10 @@
-﻿using BankProject.Domain.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Domain.Enitities
+namespace DataLayer
 {
     public class Transaction
     {

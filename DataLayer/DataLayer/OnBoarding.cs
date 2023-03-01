@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.AppServices
+namespace DataLayer
 {
-    public interface IUserLogin
+    public enum OnBoarding
     {
-        void CheckUserCardNumAndPassword();
+        Register = 1,
+        Login
     }
 }

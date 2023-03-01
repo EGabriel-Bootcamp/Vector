@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Domain.Enums
+namespace Service
 {
-    public enum OnBoarding
+    public interface IUserLogin
     {
-        Register = 1,
-        Login
+        void CheckUserCardNumAndPassword();
     }
 }

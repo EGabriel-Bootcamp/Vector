@@ -16,3 +16,9 @@ C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\ConsoleTa
 C:\Users\USER\Desktop\Project\BankProject\BankProject\obj\Debug\net6.0\BankProject.csproj.CopyComplete
 C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\USER\Desktop\Project\BankProject\BankProject\obj\Debug\net6.0\BankProject.csproj.AssemblyReference.cache
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\Service.dll
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\UI.dll
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\Service.pdb
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\UI.pdb
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\DataLayer.dll
+C:\Users\USER\Desktop\Project\BankProject\BankProject\bin\Debug\net6.0\DataLayer.pdb

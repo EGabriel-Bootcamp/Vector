@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Display
+namespace UI
 {
     public static class Validator
     {
@@ -20,7 +20,7 @@ namespace BankProject.Display
 
                 try
                 {
-                   var converter = TypeDescriptor.GetConverter(typeof(T));
+                    var converter = TypeDescriptor.GetConverter(typeof(T));
                     if (converter != null)
                     {
                         return (T)converter.ConvertFromString(userInput)!;

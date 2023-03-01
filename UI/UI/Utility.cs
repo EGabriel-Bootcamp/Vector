@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Display
+namespace UI
 {
     public static class Utility
     {
         private static long tranId;
-      // private static CultureInfo culture = new CultureInfo("en-US");
+        // private static CultureInfo culture = new CultureInfo("en-US");
 
 
         public static long GetTransactionId()
@@ -28,7 +28,7 @@ namespace BankProject.Display
 
             while (true)
             {
-                if(isPrompt)
+                if (isPrompt)
                     Console.WriteLine(prompt);
 
                 //once we promot the user for input, set it back to false
@@ -37,7 +37,7 @@ namespace BankProject.Display
 
                 if (inputKey.Key == ConsoleKey.Enter)
                 {
-                    if(input.Length == 6)
+                    if (input.Length == 6)
                     {
                         break;
                     }
@@ -53,7 +53,8 @@ namespace BankProject.Display
                 if (inputKey.Key == ConsoleKey.Backspace && input.Length > 0)
                 {
                     input.Remove(input.Length - 1, 1);
-                } else if(inputKey.Key != ConsoleKey.Backspace)
+                }
+                else if (inputKey.Key != ConsoleKey.Backspace)
                 {
                     input.Append(inputKey.KeyChar);
                     Console.Write(asterics + "*");
@@ -108,7 +109,7 @@ namespace BankProject.Display
             var culture = CultureInfo.CreateSpecificCulture("yo-NG");
             string decimalToString = amt.ToString("C", culture);
             return decimalToString;
-       
+
         }
     }
 }

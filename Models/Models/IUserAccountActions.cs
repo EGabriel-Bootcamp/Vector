@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.AppServices
+namespace Service
 {
     public interface IUserAccountActions
     {

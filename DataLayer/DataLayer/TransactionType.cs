@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BankProject.Domain.Enums
+namespace DataLayer
 {
     public enum TransactionType
     {
         Deposit,
         Withdrawal,
         Transfer,
-
     }
 }
