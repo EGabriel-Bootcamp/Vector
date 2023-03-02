@@ -10,7 +10,47 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "b48d1a96-233e-4f76-b2ab-7f20998720c1": {
+      "ProjectGuid": "b48d1a96-233e-4f76-b2ab-7f20998720c1",
+      "DisplayName": "Data",
+      "ColorIndex": 1
+    },
+    "65e8f4b4-71e0-4f4f-bb26-b24dc5e0d377": {
+      "ProjectGuid": "65e8f4b4-71e0-4f4f-bb26-b24dc5e0d377",
+      "DisplayName": "Service",
+      "ColorIndex": 2
+    },
+    "91ac9bcb-b9d5-4d09-9dd1-2e266ddaf4eb": {
+      "ProjectGuid": "91ac9bcb-b9d5-4d09-9dd1-2e266ddaf4eb",
+      "DisplayName": "UI",
+      "ColorIndex": 3
+    },
+    "c1688367-1025-4829-97d3-d7cc388d0196": {
+      "ProjectGuid": "c1688367-1025-4829-97d3-d7cc388d0196",
+      "DisplayName": "DataLayer",
+      "ColorIndex": 4
+    },
+    "c183253a-c64d-4e98-b6c0-e26d8800f6ca": {
+      "ProjectGuid": "c183253a-c64d-4e98-b6c0-e26d8800f6ca",
+      "DisplayName": "BankProject1",
+      "ColorIndex": 5
+    },
+    "d39fa605-c7e2-4567-a1e2-a1c71434c1e6": {
+      "ProjectGuid": "d39fa605-c7e2-4567-a1e2-a1c71434c1e6",
+      "DisplayName": "BankPjtTask2Enitity",
+      "ColorIndex": 6
+    },
+    "c452fb07-3846-4594-bb5a-d0e7ebe02e29": {
+      "ProjectGuid": "c452fb07-3846-4594-bb5a-d0e7ebe02e29",
+      "DisplayName": "BankPjtTask2UI",
+      "ColorIndex": 7
+    },
+    "032c1b3a-ca67-42e4-b0ad-f6ecdd3c16ce": {
+      "ProjectGuid": "032c1b3a-ca67-42e4-b0ad-f6ecdd3c16ce",
+      "DisplayName": "BankProjectTask2Services",
+      "ColorIndex": 8
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 9
 }
