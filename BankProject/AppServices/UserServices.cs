@@ -78,7 +78,7 @@ namespace BankProject.AppServices
 
         public void AddNewMember()
         {
-            string filePath = @"C:\Users\USER\Desktop\Project\BankProject\BankProject\Test.txt";
+            string filePath = @"C:\Users\DELL\source\repos\Vector\BankProject\Test.txt";
             List<string> lines = File.ReadAllLines(filePath).ToList();
             List<UserAccount> UserAccountList = new List<UserAccount>();
 
@@ -404,7 +404,7 @@ namespace BankProject.AppServices
                 TransactionDate = DateTime.Now,
                 TransactionType = _tranType,
                 TransactionAmount = _tranAmount,
-                Descriprion = _desc
+                Description = _desc
             };
 
             _ListOfTransactions.Add(transaction);
@@ -424,7 +424,7 @@ namespace BankProject.AppServices
                 var table = new ConsoleTable("Id", "Transaction Date", "Type", "Descriptions", "Amount " + AppScreen.cur);
                 foreach (var tran in filteredTransactionList)
                 {
-                    table.AddRow(tran.TransactionId, tran.TransactionDate, tran.TransactionType, tran.Descriprion, tran.TransactionAmount);
+                    table.AddRow(tran.TransactionId, tran.TransactionDate, tran.TransactionType, tran.Description, tran.TransactionAmount);
                 }
                 table.Options.EnableCount = false;
                 table.Write();
