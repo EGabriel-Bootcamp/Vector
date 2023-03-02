@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,7 +146,8 @@ namespace BankProject.AppServices
 
         public void InitializeData()
         {
-            string filePath = @"C:\Users\USER\Desktop\Project\BankProject\BankProject\Test.txt";
+           // string filePath = @"C:\Users\USER\Desktop\Project\BankProject\BankProject\Test.txt";
+            string filePath = @"C:\Users\DELL\source\repos\Vector\BankProject\Test.txt";
             List<UserAccount> UserAccountList = new List<UserAccount>();
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
