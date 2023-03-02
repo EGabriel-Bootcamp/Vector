@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -77,7 +78,7 @@ namespace BankProject.AppServices
 
         public void AddNewMember()
         {
-            string filePath = @"C:\Users\USER\Desktop\Project\BankProject\BankProject\Test.txt";
+            string filePath = @"C:\Users\DELL\source\repos\Vector\BankProject\Test.txt";
             List<string> lines = File.ReadAllLines(filePath).ToList();
             List<UserAccount> UserAccountList = new List<UserAccount>();
 
@@ -145,7 +146,7 @@ namespace BankProject.AppServices
 
         public void InitializeData()
         {
-            string filePath = @"C:\Users\USER\Desktop\Project\BankProject\BankProject\Test.txt";
+            string filePath = @"C:\Users\DELL\source\repos\Vector\BankProject\Test.txt";
             List<UserAccount> UserAccountList = new List<UserAccount>();
             List<string> lines = File.ReadAllLines(filePath).ToList();
             foreach (string line in lines)
@@ -165,16 +166,6 @@ namespace BankProject.AppServices
                 userAccountList.Add(userAccount);
             }
 
-//1,Adebanjo Olaide,123456,321321,123123,5000.00,0,false
-//2,Folorunso Nene,456789,654654,456456 ,4000.00,0,false
-//3,Olatunji Money,987654,987987,789789,3000.00,1,true
-
-            // userAccountList = new List<UserAccount>
-            //{
-            //      new UserAccount{Id = 1, FullName = "Adebanjo Olaide", AccountNumber = 123456, CardNumber = 321321, CardPin = 123123, AccountBalance = 5000.00m, IsLocked=false},
-            //      new UserAccount{Id = 2, FullName = "Folorunso Nene", AccountNumber = 456789, CardNumber = 654654, CardPin = 456456 , AccountBalance = 4000.00m, IsLocked=false},
-            //      new UserAccount{Id = 3, FullName = "Olatunji Money", AccountNumber = 987654, CardNumber = 987987, CardPin = 789789, AccountBalance = 3000.00m, IsLocked=true},
-            // };
             _ListOfTransactions = new List<Transaction>();
 
         }
@@ -413,7 +404,7 @@ namespace BankProject.AppServices
                 TransactionDate = DateTime.Now,
                 TransactionType = _tranType,
                 TransactionAmount = _tranAmount,
-                Descriprion = _desc
+                Description = _desc
             };
 
             _ListOfTransactions.Add(transaction);
@@ -433,7 +424,7 @@ namespace BankProject.AppServices
                 var table = new ConsoleTable("Id", "Transaction Date", "Type", "Descriptions", "Amount " + AppScreen.cur);
                 foreach (var tran in filteredTransactionList)
                 {
-                    table.AddRow(tran.TransactionId, tran.TransactionDate, tran.TransactionType, tran.Descriprion, tran.TransactionAmount);
+                    table.AddRow(tran.TransactionId, tran.TransactionDate, tran.TransactionType, tran.Description, tran.TransactionAmount);
                 }
                 table.Options.EnableCount = false;
                 table.Write();

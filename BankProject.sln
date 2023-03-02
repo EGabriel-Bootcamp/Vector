@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.32014.148
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankProject", "BankProject\BankProject.csproj", "{16C39874-DEFF-4271-9CE0-336111B0F833}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankProject", "BankProject\BankProject.csproj", "{16C39874-DEFF-4271-9CE0-336111B0F833}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StageTwoTask", "StageTwoTask", "{4F42030D-EE41-415D-B39C-65FD73FAE274}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chris", "Chris", "{6E0AC6A7-32AF-4C61-89EB-0DB15EF2D73C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StageThreeTask", "StageThreeTask", "{6E0361AF-00B7-450B-B811-034F6EC6FA45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,6 +24,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{16C39874-DEFF-4271-9CE0-336111B0F833} = {4F42030D-EE41-415D-B39C-65FD73FAE274}
+		{4F42030D-EE41-415D-B39C-65FD73FAE274} = {6E0AC6A7-32AF-4C61-89EB-0DB15EF2D73C}
+		{6E0361AF-00B7-450B-B811-034F6EC6FA45} = {6E0AC6A7-32AF-4C61-89EB-0DB15EF2D73C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {123C7F3B-1B1C-48B0-9654-68ABF2074ED3}
