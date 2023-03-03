@@ -9,7 +9,7 @@ namespace BankProject.Domain.Enums
     public enum BankAppMenu
     {
         CheckBalance = 1,
-        PlaceDeposit =2,
+        PlaceDeposit,
         MakeWithdrawal,
         InternalTransfer,
         ViewTransaction,
