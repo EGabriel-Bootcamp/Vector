@@ -9,6 +9,6 @@ namespace BankProject.Domain.Enums
     public enum OnBoarding
     {
         Register = 1,
-        Login
+        Login = 2
     }
 }
